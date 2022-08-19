@@ -1,0 +1,30 @@
+<div class="col-md-6 offset-md-3">
+<br/>
+<h3> Create Employee</h3>
+<form (ngSubmit)="onSubmit()">
+  
+  <div class="form-group">
+    <label>First Name</label>
+    <input type="text" pInputText class="p-inputtext-sm" class="form-control" id="firstName" [(ngModel)]="employee.name" name="name">
+  </div>
+  
+  <div class="form-group">
+    <label>Last Name</label>
+    <input type="text" pInputText class="p-inputtext-sm" class="form-control" id="lastname" [(ngModel)]="employee.surname" name="surname">
+  </div>
+  
+  <div class="form-group">
+    <label>Age</label>
+    <input type="number" pInputText class="p-inputtext-sm" class="form-control" id="age" [(ngModel)]="employee.age" name="age">
+  </div>
+  
+  <div class="form-group">
+    <label>Job Description</label>
+    <input type="text" pInputText class="p-inputtext-sm" class="form-control" id="jobDescription" [(ngModel)]="employee.jobDescription"
+      name="jobDescription">
+  </div>
+<br>
+  <button p-Button class="btn btn-success" class="p-button p-button-outlined1 p-button-success p-button-raised p-button-rounded" type="submit">Submit</button>
+
+</form>
+</div>

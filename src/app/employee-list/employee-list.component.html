@@ -1,0 +1,53 @@
+<h2>Employee List</h2>
+<div class="card">
+<p-table [value]="employees" styleClass="p-datatable-striped" responsiveLayout="scroll" [scrollable]="true" scrollHeight="700px">
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="text-align:center">First Name</th>
+            <th style="text-align:center">Last Name</th>
+            <th style="text-align:center">Age</th>
+            <th style="text-align:center">Job Description</th>
+            <th style="text-align:center">Actions</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-employee>
+        <tr>
+           <td style="text-align:center">{{employee.name}}</td>
+            <td style="text-align:center">{{employee.surname}}</td>
+            <td style="text-align:center">{{employee.age}}</td>
+            <td style="text-align:center">{{employee.jobDescription}}</td>
+             <td>
+             <button  p-Button (click)="updateEmployee(employee.id)" class="p-button p-button-outlined1 p-button-success p-button-raised p-button-rounded">Update</button>
+             <button  p-Button (click)="deleteEmployee(employee.id)" class="p-button p-button-outlined2 p-button-danger p-button-raised p-button-rounded" style="margin-left: 10px">Delete</button>
+             <button  p-Button (click)="employeeDetails(employee.id)" class="p-button p-button-outlined p-button-info p-button-raised p-button-rounded" style="margin-left: 10px">View</button>
+
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+</div>
+
+<!-- <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Job Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.name}}</td>
+            <td>{{employee.surname}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.jobDescription}}</td>
+            <td>
+             <button (click)="updateEmployee(employee.id)" class="btn btn-info">Update</button>
+             <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+             <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table> -->
